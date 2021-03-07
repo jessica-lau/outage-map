@@ -1,0 +1,8 @@
+{
+  "invalidEmail": " The email address is badly formatted. ",
+  "passwordLengthRequired": " The password must be 6 characters long or more. ",
+  "minimumPasswordLength": " Password should be at least 6 characters ",
+  "nameRequired": "Name required",
+  "nonExistentEmail": "-->   does not exist.",
+  "incorrectPassword": "Incorrect password. Please try again."
+}

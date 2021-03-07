@@ -1,0 +1,13 @@
+*.env
+/data
+**/node_modules
+.idea/
+.vscode
+.terraform
+backend.tf
+cypresse2e/cypress/screenshots/
+cypresse2e/cypress/videos
+.history
+.DS_Store
+docker-compose.override.yml
+**/yarn.lock
