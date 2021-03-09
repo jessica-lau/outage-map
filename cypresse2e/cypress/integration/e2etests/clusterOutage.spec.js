@@ -1,6 +1,6 @@
 import Outages from "../../pages/elements/clusterOutage";
 
-describe("See outage cluster", () => {
+describe("Click cluster to see outages", () => {
   const outages = new Outages();
 
   beforeEach(() => {
@@ -9,13 +9,8 @@ describe("See outage cluster", () => {
   });
 
   it("User can see outage icon after clicking cluster", () => {
-    outages
-      .getCluster()
-      .should(
-        "have.attr",
-        "src",
-        "https://maps.gstatic.com/mapfiles/transparent.png"
-      )
-      .click();
+    outages.getCluster().eq(0).click();
+    outages.getOutages().should("have.attr", "alt", "outage icon");
+    cy.wait(2000);
   });
 });

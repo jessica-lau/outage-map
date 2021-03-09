@@ -1,5 +1,7 @@
 class Outages {
-  cluster = "#map img";
+  cluster =
+    'div[style*="width: 40px; height: 40px; overflow: hidden; position: absolute; cursor: pointer; touch-action: none;"]*';
+  outages = ".infobox-card--point-icon";
 
   constructor() {}
 
@@ -9,6 +11,10 @@ class Outages {
 
   getCluster() {
     return cy.get(this.cluster);
+  }
+
+  getOutages() {
+    return cy.get(this.outages);
   }
 }
 
