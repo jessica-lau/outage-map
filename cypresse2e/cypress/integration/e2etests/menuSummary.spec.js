@@ -12,8 +12,14 @@ describe("View summary in menu", () => {
     menuSummary.getSummaryButton().eq(0).click({ force: true });
     menuSummary
       .getViewZipcode()
-      .eq(0)
+      .eq(1)
       .should("be.visible")
       .click({ force: true });
+    cy.wait(2000);
+    menuSummary.getRefineInput().click().type("30017").focus().blur();
+    menuSummary.getDataPanel().eq(0).contains("30017 (GRAYSON)");
+    menuSummary.getDataPanel().eq(1).contains("0");
+    menuSummary.getDataPanel().eq(2).contains("4,394");
+    menuSummary.getPanelFooter().contains("updated every 10 min");
   });
 });
