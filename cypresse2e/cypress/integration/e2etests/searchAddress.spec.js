@@ -1,4 +1,5 @@
 import Search from "../../pages/elements/searchAddress";
+import inputValues from "../../fixtures/inputValues.json";
 
 describe("Search an address on the map", () => {
   const search = new Search();
@@ -8,10 +9,10 @@ describe("Search an address on the map", () => {
   });
   it("User can type and search an address on the map", () => {
     search.getSearchIcon().should("be.visible").click();
-    search.getAddressInput().click().type("30606 Athens");
-    search.getAddressList().contains("Athens, GA 30606, USA").click();
+    search.getAddressInput().click().type(inputValues.searchAddress);
+    search.getAddressList().contains(inputValues.addressResult).click();
     cy.wait(3000);
     search.getPinpoint().should("be.visible").click({ force: true });
-    search.getAddressDetails().should("contain", "Athens, GA 30606, USA");
+    search.getAddressDetails().should("contain", inputValues.addressDetails);
   });
 });

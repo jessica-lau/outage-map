@@ -1,4 +1,5 @@
 import MenuSummary from "../../pages/elements/menuSummary";
+import inputValues from "../../fixtures/inputValues.json";
 
 describe("View summary in menu", () => {
   const menuSummary = new MenuSummary();
@@ -16,10 +17,15 @@ describe("View summary in menu", () => {
       .should("be.visible")
       .click({ force: true });
     cy.wait(2000);
-    menuSummary.getRefineInput().click().type("30017").focus().blur();
-    menuSummary.getDataPanel().eq(0).contains("30017 (GRAYSON)");
-    menuSummary.getDataPanel().eq(1).contains("0");
-    menuSummary.getDataPanel().eq(2).contains("4,394");
+    menuSummary
+      .getRefineInput()
+      .click()
+      .type(inputValues.zipcode)
+      .focus()
+      .blur();
+    menuSummary.getDataPanel().eq(0).contains(inputValues.zipAndCity);
+    menuSummary.getDataPanel().eq(1).contains(inputValues.customersAffected);
+    menuSummary.getDataPanel().eq(2).contains(inputValues.customersServed);
     menuSummary.getPanelFooter().contains("updated every 10 min");
   });
 });

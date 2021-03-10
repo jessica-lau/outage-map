@@ -1,8 +1,9 @@
 {
-  "invalidEmail": "qa.testzzzz6@",
-  "validDummyEmail": "qa@email.com",
-  "invalidPassword": "test",
-  "validPassword": "test123",
-  "validEmail": "a@mentorem.com",
-  "validPasswordTwo": "mentorem"
+  "zipcode": "30017",
+  "zipAndCity": "30017 (GRAYSON)",
+  "customersAffected": "0",
+  "customersServed": "4,394",
+  "searchAddress": "30606 Athens",
+  "addressResult": "Athens, GA 30606, USA",
+  "addressDetails": "Athens, GA 30606, USA"
 }

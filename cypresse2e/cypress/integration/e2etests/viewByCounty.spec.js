@@ -6,7 +6,7 @@ describe("View map by county", () => {
     county.visit();
     cy.wait(5000);
   });
-  it("User can view by BIBB County on map", () => {
+  it("User can view by county on map", () => {
     county.getViewByLocation().should("be.visible").click();
     county.getSelectionMenu().eq(1).contains("View by County").click();
     cy.wait(5000);
