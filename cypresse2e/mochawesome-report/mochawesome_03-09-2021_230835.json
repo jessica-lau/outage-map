@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-03-10T03:43:00.460Z",
-    "end": "2021-03-10T03:43:09.582Z",
-    "duration": 9122,
+    "start": "2021-03-10T04:08:25.055Z",
+    "end": "2021-03-10T04:08:35.377Z",
+    "duration": 10322,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1b563bac-fd97-49bb-98a6-70f329e78746",
+      "uuid": "857eb5a9-0a61-4d5b-b590-d89531a57f44",
       "title": "",
       "fullFile": "cypress/integration/e2etests/clusterOutage.spec.js",
       "file": "cypress/integration/e2etests/clusterOutage.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "761d28d4-6738-44cd-b7cd-0bff6c76359f",
+          "uuid": "19ee221c-111f-4e5f-a000-9695882a54e4",
           "title": "Click cluster to see outages",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "User can see outage icon after clicking cluster",
               "fullTitle": "Click cluster to see outages User can see outage icon after clicking cluster",
               "timedOut": null,
-              "duration": 8975,
+              "duration": 10112,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,18 +47,18 @@
               "context": null,
               "code": "outages.getCluster().eq(0).click({\n  force: true\n});\noutages.getOutages().should(\"have.attr\", \"alt\", \"outage icon\");\ncy.wait(2000);",
               "err": {},
-              "uuid": "fd2d2352-357e-463e-bcd2-d7eb5ac1cf86",
-              "parentUUID": "761d28d4-6738-44cd-b7cd-0bff6c76359f",
+              "uuid": "5bfb5537-41f7-42b9-a858-a1465f36d583",
+              "parentUUID": "19ee221c-111f-4e5f-a000-9695882a54e4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": ["fd2d2352-357e-463e-bcd2-d7eb5ac1cf86"],
+          "passes": ["5bfb5537-41f7-42b9-a858-a1465f36d583"],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8975,
+          "duration": 10112,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
