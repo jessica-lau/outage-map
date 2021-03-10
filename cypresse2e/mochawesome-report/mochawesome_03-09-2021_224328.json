@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-10T03:43:17.272Z",
+    "end": "2021-03-10T03:43:28.933Z",
+    "duration": 11661,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dcba2fb2-a64d-44ae-b46d-4fd8ead21297",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/menuSummary.spec.js",
+      "file": "cypress/integration/e2etests/menuSummary.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db86f797-5535-46bf-a122-a76da8033952",
+          "title": "View summary report in menu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can view summary report after typing in a location",
+              "fullTitle": "View summary report in menu User can view summary report after typing in a location",
+              "timedOut": null,
+              "duration": 11317,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "button(menuSummary.getMenuIcon(), 0);\nbutton(menuSummary.getSummaryButton(), 0);\nbutton(menuSummary.getViewZipcode(), 1);\ncy.wait(2000);\nmenuSummary.getRefineInput().click({\n  force: true\n}).type(_inputValues[\"default\"].zipcode).focus().blur();\nreportData(0, _inputValues[\"default\"].zipAndCity);\nreportData(1, _inputValues[\"default\"].customersAffected);\nreportData(2, _inputValues[\"default\"].customersServed);\nmenuSummary.getPanelFooter().contains(\"updated every 10 min\");",
+              "err": {},
+              "uuid": "ce1ec9e3-917b-45e9-9c7e-3a88d5ca98e9",
+              "parentUUID": "db86f797-5535-46bf-a122-a76da8033952",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["ce1ec9e3-917b-45e9-9c7e-3a88d5ca98e9"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11317,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm-dd-yyyy_HH:MM:ss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

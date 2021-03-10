@@ -16,7 +16,7 @@ describe("View map by county", () => {
       .contains("View by County")
       .click({ force: true });
     cy.wait(2000);
-    county.getCounty().click(850, 600);
+    county.getCounty().click(700, 520);
     county.getCountyInfo().should("contain", "BIBB County");
   });
 });

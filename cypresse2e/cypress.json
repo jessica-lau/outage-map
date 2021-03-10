@@ -1,10 +1,10 @@
 {
   "baseUrl": "https://outagemap.georgiapower.com/",
-  "video": false,
+  "video": true,
   "reporter": "../node_modules/mochawesome/src/mochawesome.js",
   "chromeWebSecurity": false,
-  "viewportWidth": 2000,
-  "viewportHeight": 1200,
+  "viewportWidth": 1680,
+  "viewportHeight": 1050,
   "reporterOptions": {
     "overwrite": false,
     "html": false,

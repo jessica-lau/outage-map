@@ -4,7 +4,9 @@
   "description": "Cypress tests",
   "scripts": {
     "pretest": "rm -rf mochawesome-report/* mochawesome.json",
-    "test": "cypress run",
+    "test": "cypress run --headless --browser chrome --config-file cypress.json",
+    "test_firefox_example": "cypress run --browser firefox --config viewportWidth=1680,viewportHeight=1050",
+    "test_edge_example": "cypress run --browser edge --config viewportWidth=1680,viewportHeight=1050",
     "report": "npx mochawesome-merge --reportDir mochawesome-report/ > mochawesome.json && npx mochawesome-report-generator --inline mochawesome.json"
   },
   "private": true,

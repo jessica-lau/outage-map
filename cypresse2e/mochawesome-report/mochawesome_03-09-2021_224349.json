@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-10T03:43:36.941Z",
+    "end": "2021-03-10T03:43:49.473Z",
+    "duration": 12532,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4db116fd-2a22-4ce4-b47d-3cd999062b24",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/searchAddress.spec.js",
+      "file": "cypress/integration/e2etests/searchAddress.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6e4b6e71-b9dc-4072-9168-ba628aaf4227",
+          "title": "Search an address on the map",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can type and search for address on map",
+              "fullTitle": "Search an address on the map User can type and search for address on map",
+              "timedOut": null,
+              "duration": 12349,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "icon(search.getSearchIcon());\nsearch.getAddressInput().click({\n  force: true\n}).type(_inputValues[\"default\"].searchAddress);\nsearch.getAddressList().contains(_inputValues[\"default\"].addressResult).click({\n  force: true\n});\ncy.wait(3000);\nicon(search.getPinpoint());\nsearch.getAddressDetails().should(\"contain\", _inputValues[\"default\"].addressDetails);",
+              "err": {},
+              "uuid": "8be74c77-4cb1-48c2-92a0-39197d394f68",
+              "parentUUID": "6e4b6e71-b9dc-4072-9168-ba628aaf4227",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["8be74c77-4cb1-48c2-92a0-39197d394f68"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12349,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm-dd-yyyy_HH:MM:ss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

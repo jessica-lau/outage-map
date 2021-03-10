@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-10T03:43:57.746Z",
+    "end": "2021-03-10T03:44:04.618Z",
+    "duration": 6872,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f34867d3-8b1c-4723-87c2-df220180dc13",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/serviceTerritory.spec.js",
+      "file": "cypress/integration/e2etests/serviceTerritory.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "24151900-42c3-4256-92e6-02ed3149c04d",
+          "title": "GPC Service Territory in map legend",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can check and uncheck GPC Service Territory on map legend",
+              "fullTitle": "GPC Service Territory in map legend User can check and uncheck GPC Service Territory on map legend",
+              "timedOut": null,
+              "duration": 6748,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (serviceTerritory.getTerritoryCheckbox().should(\"be.checked\")) {\n  serviceTerritory.getTerritoryCheckbox().click({\n    force: true\n  });\n} else {}",
+              "err": {},
+              "uuid": "6d9118e7-3397-4661-a107-663fd7651558",
+              "parentUUID": "24151900-42c3-4256-92e6-02ed3149c04d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["6d9118e7-3397-4661-a107-663fd7651558"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6748,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm-dd-yyyy_HH:MM:ss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

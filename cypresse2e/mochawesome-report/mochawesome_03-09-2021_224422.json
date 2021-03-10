@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-10T03:44:12.574Z",
+    "end": "2021-03-10T03:44:22.603Z",
+    "duration": 10029,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "71e18fc9-3608-46e4-839f-6bb9c992446d",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/viewByCounty.spec.js",
+      "file": "cypress/integration/e2etests/viewByCounty.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4d158c82-d150-47ca-8859-545e392eefac",
+          "title": "View map by county",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can view by county on map",
+              "fullTitle": "View map by county User can view by county on map",
+              "timedOut": null,
+              "duration": 9743,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "county.getViewByLocation().should(\"be.visible\").click({\n  force: true\n});\ncounty.getSelectionMenu().eq(1).contains(\"View by County\").click({\n  force: true\n});\ncy.wait(2000);\ncounty.getCounty().click(700, 520);\ncounty.getCountyInfo().should(\"contain\", \"BIBB County\");",
+              "err": {},
+              "uuid": "717eb985-1828-4ba8-9560-b23979037330",
+              "parentUUID": "4d158c82-d150-47ca-8859-545e392eefac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["717eb985-1828-4ba8-9560-b23979037330"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9743,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm-dd-yyyy_HH:MM:ss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
