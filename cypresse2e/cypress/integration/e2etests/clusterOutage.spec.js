@@ -9,7 +9,7 @@ describe("Click cluster to see outages", () => {
   });
 
   it("User can see outage icon after clicking cluster", () => {
-    outages.getCluster().eq(0).click();
+    outages.getCluster().eq(0).click({ force: true });
     outages.getOutages().should("have.attr", "alt", "outage icon");
     cy.wait(2000);
   });
