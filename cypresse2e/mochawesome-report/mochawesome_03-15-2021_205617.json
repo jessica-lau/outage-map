@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-03-11T03:05:42.326Z",
-    "end": "2021-03-11T03:05:50.869Z",
-    "duration": 8543,
+    "start": "2021-03-16T00:56:08.392Z",
+    "end": "2021-03-16T00:56:17.168Z",
+    "duration": 8776,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d8bb0f80-72ab-499a-be39-cbbf085f8829",
+      "uuid": "95fa81ad-0204-47f9-9563-569af558e753",
       "title": "",
       "fullFile": "cypress/integration/e2etests/closeLegend.spec.js",
       "file": "cypress/integration/e2etests/closeLegend.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f0afcb81-0e0f-4b1a-ac8e-f13ed659f565",
+          "uuid": "da71d445-4558-4abd-a3ff-c60a5efa1626",
           "title": "Close legend on map",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "The legend icon is visible after the user closes legend on map",
               "fullTitle": "Close legend on map The legend icon is visible after the user closes legend on map",
               "timedOut": null,
-              "duration": 8221,
+              "duration": 7963,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,18 +47,18 @@
               "context": null,
               "code": "closeLegend.getCloseButton().should(\"be.visible\").eq(1).click({\n  force: true\n});\ncloseLegend.getLegendIcon().should(\"be.visible\");",
               "err": {},
-              "uuid": "bc6a51a8-efc4-4be3-a01d-69202918b725",
-              "parentUUID": "f0afcb81-0e0f-4b1a-ac8e-f13ed659f565",
+              "uuid": "dfa14138-988d-4950-9359-3e786d2ad8e6",
+              "parentUUID": "da71d445-4558-4abd-a3ff-c60a5efa1626",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": ["bc6a51a8-efc4-4be3-a01d-69202918b725"],
+          "passes": ["dfa14138-988d-4950-9359-3e786d2ad8e6"],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8221,
+          "duration": 7963,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

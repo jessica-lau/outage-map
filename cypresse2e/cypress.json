@@ -10,5 +10,7 @@
     "html": false,
     "json": true,
     "timestamp": "mm-dd-yyyy_HH:MM:ss"
-  }
+  },
+
+  "screenshotsFolder": "mochawesome-report"
 }

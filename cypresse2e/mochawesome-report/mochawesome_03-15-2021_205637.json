@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T00:56:28.330Z",
+    "end": "2021-03-16T00:56:37.304Z",
+    "duration": 8974,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b2a0ebf2-88ab-47a0-a271-06991df2da3a",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/clusterOutage.spec.js",
+      "file": "cypress/integration/e2etests/clusterOutage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1e2f99d1-80ee-408b-8a17-484520036ce1",
+          "title": "Click cluster to see outages",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can see outage icon after clicking cluster",
+              "fullTitle": "Click cluster to see outages User can see outage icon after clicking cluster",
+              "timedOut": null,
+              "duration": 8870,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "outages.getCluster().eq(0).click({\n  force: true\n});\noutages.getOutages().should(\"have.attr\", \"alt\", \"outage icon\");\ncy.wait(2000);",
+              "err": {},
+              "uuid": "008372d2-91d7-4c3f-954d-6d9a49013bf5",
+              "parentUUID": "1e2f99d1-80ee-408b-8a17-484520036ce1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["008372d2-91d7-4c3f-954d-6d9a49013bf5"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8870,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm-dd-yyyy_HH:MM:ss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

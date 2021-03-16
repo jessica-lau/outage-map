@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-16T00:57:36.371Z",
+    "end": "2021-03-16T00:57:49.952Z",
+    "duration": 13581,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "df0af170-db81-4778-9fcd-7a316d0e1f61",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/viewByCounty.spec.js",
+      "file": "cypress/integration/e2etests/viewByCounty.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a79cb85-ff52-47e5-bbc2-64c2ab0f9f75",
+          "title": "View map by county",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can view by county on map",
+              "fullTitle": "View map by county User can view by county on map",
+              "timedOut": null,
+              "duration": 13448,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"/home/docker/outage-map/cypresse2e/mochawesome-report/e2etests/viewByCounty.spec.js/View map by county -- User can view by county on map (failed).png\"",
+              "code": "county.getViewByLocation().should(\"be.visible\").click({\n  force: true\n});\ncounty.getSelectionMenu().eq(1).contains(\"View by County\").click({\n  force: true\n});\ncy.wait(2000);\ncounty.getCounty().click(700, 520);\ncounty.getCountyInfo().should(\"contain\", \"BIBB County\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.infobox-card--header`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.infobox-card--header`, but never found it.\n    at Context.eval (https://outagemap.georgiapower.com/__cypress/tests?p=cypress/integration/e2etests/viewByCounty.spec.js:205:28)",
+                "diff": null
+              },
+              "uuid": "1d2fd86a-0d5c-49cb-abb2-6a684c4cab44",
+              "parentUUID": "3a79cb85-ff52-47e5-bbc2-64c2ab0f9f75",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": ["1d2fd86a-0d5c-49cb-abb2-6a684c4cab44"],
+          "pending": [],
+          "skipped": [],
+          "duration": 13448,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm-dd-yyyy_HH:MM:ss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

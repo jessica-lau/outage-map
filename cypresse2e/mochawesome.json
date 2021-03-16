@@ -1,0 +1,447 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 7,
+    "passes": 5,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-03-16T00:56:08.392Z",
+    "end": "2021-03-16T00:58:05.869Z",
+    "duration": 71471,
+    "testsRegistered": 7,
+    "passPercent": 71.42857142857143,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "95fa81ad-0204-47f9-9563-569af558e753",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/closeLegend.spec.js",
+      "file": "cypress/integration/e2etests/closeLegend.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "da71d445-4558-4abd-a3ff-c60a5efa1626",
+          "title": "Close legend on map",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "The legend icon is visible after the user closes legend on map",
+              "fullTitle": "Close legend on map The legend icon is visible after the user closes legend on map",
+              "timedOut": null,
+              "duration": 7963,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "closeLegend.getCloseButton().should(\"be.visible\").eq(1).click({\n  force: true\n});\ncloseLegend.getLegendIcon().should(\"be.visible\");",
+              "err": {},
+              "uuid": "dfa14138-988d-4950-9359-3e786d2ad8e6",
+              "parentUUID": "da71d445-4558-4abd-a3ff-c60a5efa1626",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["dfa14138-988d-4950-9359-3e786d2ad8e6"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7963,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b2a0ebf2-88ab-47a0-a271-06991df2da3a",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/clusterOutage.spec.js",
+      "file": "cypress/integration/e2etests/clusterOutage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1e2f99d1-80ee-408b-8a17-484520036ce1",
+          "title": "Click cluster to see outages",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can see outage icon after clicking cluster",
+              "fullTitle": "Click cluster to see outages User can see outage icon after clicking cluster",
+              "timedOut": null,
+              "duration": 8870,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "outages.getCluster().eq(0).click({\n  force: true\n});\noutages.getOutages().should(\"have.attr\", \"alt\", \"outage icon\");\ncy.wait(2000);",
+              "err": {},
+              "uuid": "008372d2-91d7-4c3f-954d-6d9a49013bf5",
+              "parentUUID": "1e2f99d1-80ee-408b-8a17-484520036ce1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["008372d2-91d7-4c3f-954d-6d9a49013bf5"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8870,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0f4e5785-4b57-42d9-8b15-5a67d34ff401",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/menuSummary.spec.js",
+      "file": "cypress/integration/e2etests/menuSummary.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ea032843-5224-49ad-bf28-3002aec12fcc",
+          "title": "View summary report in menu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can view summary report after typing in a location",
+              "fullTitle": "View summary report in menu User can view summary report after typing in a location",
+              "timedOut": null,
+              "duration": 14627,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"/home/docker/outage-map/cypresse2e/mochawesome-report/e2etests/menuSummary.spec.js/View summary report in menu -- User can view summary report after typing in a location (failed).png\"",
+              "code": "button(menuSummary.getMenuIcon(), 0);\nbutton(menuSummary.getSummaryButton(), 0);\nbutton(menuSummary.getViewZipcode(), 1);\ncy.wait(2000);\nmenuSummary.getRefineInput().click({\n  force: true\n}).type(_inputValues[\"default\"].zipcode).focus().blur();\nreportData(0, _inputValues[\"default\"].zipAndCity);\nreportData(1, _inputValues[\"default\"].customersAffected);\nreportData(2, _inputValues[\"default\"].customersServed);\nmenuSummary.getPanelFooter().contains(\"updated every 10 min\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '4,394' within the element: <div.ReactVirtualized__Table__rowColumn.cust-s.hidden-lt-tablet> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '4,394' within the element: <div.ReactVirtualized__Table__rowColumn.cust-s.hidden-lt-tablet> but never did.\n    at reportData (https://outagemap.georgiapower.com/__cypress/tests?p=cypress/integration/e2etests/menuSummary.spec.js:230:42)\n    at Context.eval (https://outagemap.georgiapower.com/__cypress/tests?p=cypress/integration/e2etests/menuSummary.spec.js:219:5)",
+                "diff": null
+              },
+              "uuid": "663bcaa0-2c8f-4d35-bed0-1fe5a91beba3",
+              "parentUUID": "ea032843-5224-49ad-bf28-3002aec12fcc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": ["663bcaa0-2c8f-4d35-bed0-1fe5a91beba3"],
+          "pending": [],
+          "skipped": [],
+          "duration": 14627,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "62c8afd9-2a41-4529-8730-9752f0d725ed",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/searchAddress.spec.js",
+      "file": "cypress/integration/e2etests/searchAddress.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3b04bcac-f92e-43cb-8751-7290e00171b8",
+          "title": "Search an address on the map",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can type and search for address on map",
+              "fullTitle": "Search an address on the map User can type and search for address on map",
+              "timedOut": null,
+              "duration": 11232,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "icon(search.getSearchIcon());\nsearch.getAddressInput().click({\n  force: true\n}).type(_inputValues[\"default\"].searchAddress);\nsearch.getAddressList().contains(_inputValues[\"default\"].addressResult).click({\n  force: true\n});\ncy.wait(3000);\nicon(search.getPinpoint());\nsearch.getAddressDetails().should(\"contain\", _inputValues[\"default\"].addressDetails);",
+              "err": {},
+              "uuid": "e7b562a3-cdcf-4cd9-aa0b-2908878f679a",
+              "parentUUID": "3b04bcac-f92e-43cb-8751-7290e00171b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["e7b562a3-cdcf-4cd9-aa0b-2908878f679a"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11232,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "edb75fb7-6849-4c1b-8d42-5d15ca878496",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/serviceTerritory.spec.js",
+      "file": "cypress/integration/e2etests/serviceTerritory.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0c051e60-e7f8-478c-ab04-b162afcf23fd",
+          "title": "GPC Service Territory in map legend",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can check and uncheck GPC Service Territory on map legend",
+              "fullTitle": "GPC Service Territory in map legend User can check and uncheck GPC Service Territory on map legend",
+              "timedOut": null,
+              "duration": 6482,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (serviceTerritory.getTerritoryCheckbox().should(\"be.checked\")) {\n  serviceTerritory.getTerritoryCheckbox().click({\n    force: true\n  });\n} else {}",
+              "err": {},
+              "uuid": "954c1fea-e34b-4670-94ad-ee5e57a30c9f",
+              "parentUUID": "0c051e60-e7f8-478c-ab04-b162afcf23fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["954c1fea-e34b-4670-94ad-ee5e57a30c9f"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6482,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "df0af170-db81-4778-9fcd-7a316d0e1f61",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/viewByCounty.spec.js",
+      "file": "cypress/integration/e2etests/viewByCounty.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a79cb85-ff52-47e5-bbc2-64c2ab0f9f75",
+          "title": "View map by county",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can view by county on map",
+              "fullTitle": "View map by county User can view by county on map",
+              "timedOut": null,
+              "duration": 13448,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"/home/docker/outage-map/cypresse2e/mochawesome-report/e2etests/viewByCounty.spec.js/View map by county -- User can view by county on map (failed).png\"",
+              "code": "county.getViewByLocation().should(\"be.visible\").click({\n  force: true\n});\ncounty.getSelectionMenu().eq(1).contains(\"View by County\").click({\n  force: true\n});\ncy.wait(2000);\ncounty.getCounty().click(700, 520);\ncounty.getCountyInfo().should(\"contain\", \"BIBB County\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.infobox-card--header`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.infobox-card--header`, but never found it.\n    at Context.eval (https://outagemap.georgiapower.com/__cypress/tests?p=cypress/integration/e2etests/viewByCounty.spec.js:205:28)",
+                "diff": null
+              },
+              "uuid": "1d2fd86a-0d5c-49cb-abb2-6a684c4cab44",
+              "parentUUID": "3a79cb85-ff52-47e5-bbc2-64c2ab0f9f75",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": ["1d2fd86a-0d5c-49cb-abb2-6a684c4cab44"],
+          "pending": [],
+          "skipped": [],
+          "duration": 13448,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "41e637a1-10cd-4f2f-b164-a050eda7d87d",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/zoomMap.spec.js",
+      "file": "cypress/integration/e2etests/zoomMap.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "038b4e06-a5f7-4d60-822b-402bf0c92b51",
+          "title": "Zoom into map",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can zoom map to 20km",
+              "fullTitle": "Zoom into map User can zoom map to 20km",
+              "timedOut": null,
+              "duration": 8849,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "zoom.getZoomIcon().should(\"contain\", \"Map Zoom In\").click({\n  force: true\n});\ncy.wait(2000);\nzoom.getKm().contains(\"20 km\");",
+              "err": {},
+              "uuid": "0e4adc27-8765-4f8f-b799-c49d4ea113bb",
+              "parentUUID": "038b4e06-a5f7-4d60-822b-402bf0c92b51",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["0e4adc27-8765-4f8f-b799-c49d4ea113bb"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8849,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm-dd-yyyy_HH:MM:ss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -22,3 +22,14 @@ import "./commands";
 // Cypress.on("window:before:load", (win) => {
 //   win.indexedDB.deleteDatabase("firebaseLocalStorageDb");
 // });
+
+import addContext from "mochawesome/addContext";
+
+Cypress.on("test:after:run", (test, runnable) => {
+  if (test.state === "failed") {
+    const screenshot = `${Cypress.config("screenshotsFolder")}/${
+      Cypress.spec.name
+    }/${runnable.parent.title} -- ${test.title} (failed).png`;
+    addContext({ test }, screenshot);
+  }
+});

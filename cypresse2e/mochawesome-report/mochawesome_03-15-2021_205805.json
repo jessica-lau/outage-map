@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-16T00:57:56.867Z",
+    "end": "2021-03-16T00:58:05.869Z",
+    "duration": 9002,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41e637a1-10cd-4f2f-b164-a050eda7d87d",
+      "title": "",
+      "fullFile": "cypress/integration/e2etests/zoomMap.spec.js",
+      "file": "cypress/integration/e2etests/zoomMap.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "038b4e06-a5f7-4d60-822b-402bf0c92b51",
+          "title": "Zoom into map",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can zoom map to 20km",
+              "fullTitle": "Zoom into map User can zoom map to 20km",
+              "timedOut": null,
+              "duration": 8849,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "zoom.getZoomIcon().should(\"contain\", \"Map Zoom In\").click({\n  force: true\n});\ncy.wait(2000);\nzoom.getKm().contains(\"20 km\");",
+              "err": {},
+              "uuid": "0e4adc27-8765-4f8f-b799-c49d4ea113bb",
+              "parentUUID": "038b4e06-a5f7-4d60-822b-402bf0c92b51",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": ["0e4adc27-8765-4f8f-b799-c49d4ea113bb"],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8849,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm-dd-yyyy_HH:MM:ss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
