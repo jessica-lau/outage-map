@@ -5,7 +5,7 @@
 3. Run command `node_modules/.bin/cypress open` in the terminal to open the Cypress test runner.
 4. In the Cypress test runner, click on a test spec to run it or click run all test specs to run all sequentially.
 
-5. To generate the mochaawesome report you can run `npm run report` after the test completed. You can chain the two commands together in your CI job.
+5. To generate the mochaawesome report you can run `npm run report` after the test completes. You can chain the two commands together in your CI job.
 
 **How to run test specs in terminal/headless:**
 
